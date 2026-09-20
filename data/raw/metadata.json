@@ -1,0 +1,42 @@
+{
+  "dataset_name": "Bộ dữ liệu ô nhiễm không khí của VnExpress",
+  "description": "Dataset gồm các bài báo trên VnExpress liên quan đến ô nhiễm không khí và chất lượng không khí.",
+  "source": "VnExpress",
+  "source_website": "https://vnexpress.net/",
+  "collection_method": "Thu thập URL từ kết quả tìm kiếm của VnExpress (collect_url.py), sau đó tải và trích xuất từng bài bằng requests + BeautifulSoup (collect_articles.py). Chỉ giữ bài có đủ title, date và content >= 300 ký tự.",
+  "search_keywords": [
+    "ô nhiễm không khí",
+    "chất lượng không khí",
+    "bụi mịn",
+    "AQI"
+  ],
+  "number_of_articles": 523,
+  "date_range": {
+    "from": "2003-10-10",
+    "to": "2026-09-18"
+  },
+  "data_format": "JSON",
+  "data_file": "articles.json",
+  "fields": {
+    "url": "URL của bài báo",
+    "title": "Tiêu đề bài báo",
+    "author": "Tác giả bài báo; null nếu không xác định được",
+    "date": "Ngày và thời gian đăng bài",
+    "content": "Nội dung bài báo"
+  },
+  "null_counts": {
+    "url": 0,
+    "title": 0,
+    "author": 101,
+    "date": 0,
+    "content": 0
+  },
+  "scripts": [
+    "collect_url.py",
+    "collect_articles.py"
+  ],
+  "owner": "Dương Minh Tuấn",
+  "student_id": "BIT250370",
+  "collection_date": "2026-09-19",
+  "encoding": "UTF-8"
+}
